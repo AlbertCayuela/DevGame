@@ -55,7 +55,7 @@ void j1App::AddModule(j1Module* module)
 }
 
 // Called before render is available
-bool j1App::Awake()
+bool j1App::Awake(pugi::xml_node node)
 {
 	// TODO 3: Load config.xml file using load_file() method from the xml_document class.
 	// If everything goes well, load the top tag inside the xml_node property
@@ -65,6 +65,8 @@ bool j1App::Awake()
 	pugi::xml_parse_result result = document.load_file("xml/config.xml");
 
 	LOG("-----------------------------------------------------------------------------------Load result: %s", result.description());
+
+	node = document.child("config");
 
 	bool ret = true;
 

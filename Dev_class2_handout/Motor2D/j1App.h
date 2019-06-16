@@ -24,7 +24,7 @@ public:
 	virtual ~j1App();
 
 	// Called before render is available
-	bool Awake();
+	bool Awake(pugi::xml_node node);
 
 	// Called before the first frame
 	bool Start();
@@ -69,6 +69,8 @@ public:
 	j1Audio*			audio;
 	j1Scene*			scene;
 
+	pugi::xml_document document;
+	pugi::xml_node node;
 
 private:
 
@@ -80,8 +82,7 @@ private:
 	// a xml_document to store the while config file and
 	// a xml_node to read specific branches of the xml
 
-	pugi::xml_document document;
-	pugi::xml_node node;
+
 
 	int					argc;
 	char**				args;

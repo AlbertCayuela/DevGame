@@ -3,7 +3,21 @@
 <!-- config xml for the game -->
 
 <config>
+  <app>
+    <title>Game Development</title>
+    <organization>UPC</organization>
+  </app>
 
-  <name>Development Game</name>
-  
+  <renderer>
+    <vsync value="false"/>
+  </renderer>
+
+  <window>
+    <resolution width="1024" height="768" scale="1"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
 </config>
